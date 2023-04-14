@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd
+    ">
+
+	<!-- standalone list -->
+	<util:list list-class="java.util.LinkedList" id="mybestfriends">
+		<value>rutvik</value>
+		<value>sanket</value>
+		<value>dhruv</value>
+	</util:list>
+	
+	<!-- standalone map -->
+	<util:map map-class="java.util.HashMap" id="feesref">
+		<entry key="java" value="2313"/>
+		<entry key="python" value="1400"/>
+	</util:map>
+	
+	<!-- standalone properties -->
+	<util:properties  id="pross">
+		<prop key="driver">com.jdbc</prop>
+		<prop key="username">root</prop>
+		<prop key="password">root</prop>
+	</util:properties>
+	
+	
+	<bean class="com.springcore.standalone.collection.person" name="person1">
+		<property name="friends" ref="mybestfriends"/>
+		<property name="fees" ref="feesref"/>
+		<property name="pros1" ref="pross"/>
+	</bean>
+	
+	<bean class="com.springcore.standalone.collection.person" name="person2">
+		<property name="friends" ref="mybestfriends"/>
+		<property name="fees" ref="feesref"/>
+		<property name="pros1" ref="pross"/>
+	</bean>
+	
+</beans>
