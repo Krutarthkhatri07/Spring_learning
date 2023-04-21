@@ -18,13 +18,13 @@
     	<div class="card mx-auto mt-5 bg-success" style="widht:30%">
     		<div class="card-body py-5">
     		<h3 class="text-center text-white">MY SEARCH</h3>
-    			<form class="my-3" action="search">
+    			<form class="my-3" action="welcome">
     				<div class="form-group">
-    					<input type="text" name="querybox" placeholder="enter your keyword" class="form-control">
+    					<input type="text" name="name" placeholder="enter your name" class="form-control">
     					
     				</div>
     				<div  class="container text-center">
-    					<input type="submit" value="Search" class="btn btn-outline-light">
+    					<input type="submit" value="submit" class="btn btn-outline-light">
     				</div>
     			
     			</form>
